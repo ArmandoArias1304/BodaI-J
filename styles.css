@@ -1,0 +1,716 @@
+/* Estilo para el body */
+body {
+    font-family: "Patua One", serif;
+    background: linear-gradient(to bottom, #fcfdff, #fcfdff);
+    color: #4a2c2a;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#next-button {
+    display: block;
+    margin: 20px auto 0; /* Centrar y agregar margen arriba */
+    min-width: 150px; /* Evitar que el botón cambie de tamaño */
+}
+
+.coupon {
+    border: 3px dashed #d77b3a;
+    border-radius: 20px;
+    padding: 20px;
+    max-width: 400px;
+    background-color: #eeece2;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+}
+
+.coupon::before,
+.coupon::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    background-color: white;
+    z-index: 1;
+}
+
+.coupon::before {
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 0 20px 20px 0;
+}
+
+.coupon::after {
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 20px 0 0 20px;
+}
+
+.coupon-dashed-border {
+    border: 2px dashed #aa7712;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+.coupon-title {
+    font-family: "Patua One", serif;
+    color: #8B4513;
+}
+
+.confirmation-code {
+    font-size: 1.2em;
+    letter-spacing: 3px;
+    background-color: #ffc369;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+.decoracion-superior {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px; /* Ajusta este valor para hacerla más grande */
+    height: auto; /* Puedes cambiarlo a un tamaño fijo si es necesario */
+    z-index: 999;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.8));
+}
+
+.decoracion-inferior {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 200px; /* Ajusta este valor para hacerla más grande */
+    height: auto;
+    z-index: 999;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.8));
+}
+
+
+  /* Estilo para ocultar la sección de inicio */
+  #inicio {
+    display: block;
+  }
+
+.principal{
+    margin-top: 190px;
+}
+
+.btn-custom {
+    background-color: #6d3c27; /* Color personalizado */
+    color: white; /* Color del texto */
+    border: none; /* Opcional: elimina el borde */
+}
+
+.btn-custom:hover {
+    background-color: #844439; /* Color cuando pasa el mouse por encima */
+    color: white;
+}
+
+#informacion .nombres {
+    font-size: 4.5rem;
+    color: #dd9a1f; /* Cambia el color a lo que prefieras */
+    
+}
+
+
+
+
+.fs-5{
+    padding : 20px;
+    color: #65727a;
+
+}
+
+
+
+.text-principal{
+    
+    font-family: "Great Vibes", cursive;
+    font-size: 100px;
+    color: #65727a;
+}
+
+.parrafo{
+    font-family: "Great Vibes", cursive;
+    font-size: 40px;
+    color: #dee6ed;
+
+}
+
+.nombres {
+    font-family: "Great Vibes", cursive;
+    font-size: 4rem; /* Ajusta el tamaño a tu gusto */
+    font-weight: bold;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.4)); /* Sombra con desplazamiento y opacidad */
+}
+
+.nombres h2{
+    font-family: "Great Vibes", cursive;
+    color: #e6b33d;
+    font-size: 4rem; /* Ajusta el tamaño a tu gusto */
+    font-weight: bold;
+    filter: drop-shadow(4px 4px 10px rgba(0, 0, 0, 0.6)); /* Sombra con desplazamiento y opacidad */
+}
+
+.container-principal{
+
+    background-color: transparent;
+}
+/* Sección de inicio con el carrusel */
+#inicio {
+    position: relative;
+}
+
+#inicio img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+/* Capa oscura encima de la imagen utilizando ::before */
+#inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad aquí */
+    z-index: 1; /* Asegura que la capa oscura esté debajo del contenido */
+}
+
+#inicio .position-absolute {
+    z-index: 2; /* Asegura que el texto esté encima de la capa oscura */
+}
+
+
+/* Ajuste para las imágenes del carrusel */
+.object-fit-cover {
+    object-fit: cover;
+}
+
+/* Transición para la segunda sección */
+#informacion {
+    padding: 20px;
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+     /* Fondo transparente */
+}
+
+.mostrar {
+    opacity: 1 !important;
+    transform: scale(1) !important;
+}
+
+.oculto {
+    display: none !important;
+}
+
+/* Redondear las imágenes del carrusel */
+.carousel-inner img {
+    border-radius: 15px;
+}
+
+.carousel {
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Párrafo de amor (Sección 3) */
+.container {
+    padding: 30px;
+   
+}
+
+/* Estilo del párrafo */
+p {
+    font-size: 1.2rem;
+    color: #6c757d;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/*BOTON UBI*/
+
+
+
+
+/* Estilo para el botón de Google Maps */
+#lugar .btn-primary {
+    background-color: #4a2c2a; /* Color de fondo del botón */
+    border-color: #4a2c2a; /* Color del borde del botón */
+}
+
+#lugar .btn-primary:hover {
+    background-color: #6c757d; /* Color de fondo cuando el mouse pasa sobre el botón */
+    border-color: #6c757d; /* Color del borde cuando el mouse pasa sobre el botón */
+}
+
+
+
+
+/*CUENTA REGRESIVA*/
+/* Estilo para la cuenta regresiva */
+#cuenta-regresiva {
+   
+    padding: 40px;
+   
+}
+
+/* Estilo para el temporizador */
+#cuenta-regresiva-timer {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4a2c2a;
+}
+
+
+/* LINEA DEL TIEMPOOO*/
+
+
+
+
+
+/* Sección de la Línea del Tiempo */
+#linea-del-tiempo {
+    padding: 50px 0;
+}
+
+/* Título de la sección */
+.section-title {
+    font-family: "Sacramento", cursive;
+    font-size: 4rem;
+    color: #e6b33d;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    color: #C8A96E; /* Dorado elegante */
+}
+
+/* Contenedor de la línea del tiempo */
+.timeline {
+    position: relative;
+    padding: 20px 0;
+    width: 100%;
+}
+
+/* Línea central de la línea del tiempo */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background-color: rgba(230, 167, 59, 0.645);
+    transform: translateX(-50%);
+}
+
+/* Evento en la línea del tiempo */
+.timeline-event {
+    position: relative;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Contenido del evento */
+.timeline-content {
+
+    max-width: 600px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    
+}
+
+/* Año dentro del contenido */
+.timeline-year {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #dd9a1f;
+    margin-bottom: 10px;
+}
+
+/* Imagen rectangular del evento */
+.timeline-image {
+    width: 100%;
+    max-width: 300px; /* Ajusta el tamaño máximo */
+    margin: 0 auto 15px;
+}
+
+.timeline-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px; /* Bordes ligeramente redondeados */
+}
+
+/* Línea de la línea del tiempo (Solo para la sección correcta) */
+#historia .timeline {
+    position: relative;
+}
+
+#historia .timeline::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 4px;
+    height: 100%;
+    background-color: #4a2c2a;
+    transform: translateX(-50%);
+}
+
+/* Evita que la línea aparezca en el itinerario */
+#itinerario .timeline::before {
+    content: none;
+}
+
+
+
+
+/*ITINERARIO*/
+
+
+
+/* Itinerario */
+.timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+
+/* Cada evento */
+.timeline li {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 40px;
+    justify-content: space-between;
+}
+
+/* Alternar los lados */
+.timeline li:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+/* Íconos redondos */
+.timeline .icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #4a2c2a;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tarjeta de contenido */
+.timeline .content {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 15px 20px;
+    border-radius: 12px;
+    border: 2px solid #4a2c2a;
+    max-width: 250px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Animación al hacer scroll */
+.timeline .content:hover {
+    transform: scale(1.05);
+}
+
+/* Títulos */
+.timeline h4 {
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #4a2c2a;
+    font-size: 1.3rem;
+}
+
+/* Texto */
+.timeline p {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+}
+
+
+
+
+
+/*VESTIMENTA*/
+/* Estilos para la sección de Información Importante */
+#informacion-vestimenta {
+   
+}
+
+
+
+/* Estilos para los ítems dentro de la sección */
+.info-item {
+    margin-bottom: 20px;
+}
+
+.info-item h4 {
+    font-size: 1.5rem;
+    color: #4a2c2a;
+}
+
+/* Estilo para los íconos */
+.icon {
+    font-size: 2rem;
+    color: #4a2c2a;
+    margin-bottom: 10px;
+}
+
+/* Estilo para los párrafos */
+.info-item p {
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+
+
+
+/*REGALOS*/
+
+
+
+/* Estilo para la sección Lista de Regalos */
+#regalos {
+    padding: 20px;
+   
+}
+
+#regalos h2 {
+  
+}
+
+.store {
+    margin-bottom: 30px;
+}
+
+
+
+.store img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.store a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.store a:hover {
+    background-color: #1d3557;
+    border-color: #1d3557;
+}
+
+
+
+
+
+
+
+
+/*TRUVIA DE NOVIOS*/
+
+
+
+
+
+/* Estilo de la Trivia */
+#trivia {
+    padding: 40px 0;
+    
+}
+
+#trivia h2 {
+    color: #4a2c2a;
+    margin-bottom: 30px;
+}
+
+#trivia .form-check {
+    margin: 10px 0;
+}
+
+#trivia button {
+    margin-top: 20px;
+}
+
+#trivia .result {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.separacion {
+    max-width: 100%; /* Asegura que la imagen no sobrepase el contenedor */
+    display: block; /* Evita espacios en blanco extra */
+    margin: 0 auto; /* Centra la imagen si es necesario */
+}
+
+
+
+
+
+/*ANIMACION*/
+
+
+@keyframes show{
+
+    from{
+
+        opacity: 0; scale: 10%;
+    }
+
+    to{
+        opacity: 1; scale: 100%;
+    }
+}
+
+.fs-5{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+.padres{
+
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+.padrino{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+.lugar1{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+.regresiva{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+.lineatiempo{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+.itinerario1{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+.regalos1{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+.trivia1{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+
+.infovesti{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+.confirm{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}
+
+.separacion{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
+}

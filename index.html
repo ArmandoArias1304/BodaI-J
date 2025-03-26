@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invitación de Boda</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rochester&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+
+    <!-- Agrega esto en el <head> de tu HTML -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al CSS -->
+</head>
+<body>
+
+      
+
+    <audio id="audio-player" src="audio/musica.mp3" preload="auto"></audio>
+
+
+    <section class="container-principal">
+    <!-- Sección 1: Inicio (Imagen de fondo con texto encima) -->
+    <div id="inicio" class="position-relative vh-100">
+        <img src="images/iniciovertical.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="Invitación de Boda">
+        
+        <!-- Texto sobre la imagen -->
+        <div class="position-absolute top-50 start-50 translate-middle text-center text-white">
+            <h1 class="nombres">Erika</h1>
+            <h1 class="nombres">&</h1>
+            <h1 class="nombres">Alejandro</h1>
+            <p class="parrafo">12 | 12 | 2025</p>
+            <button class="btn btn-light btn-lg mt-3" onclick="mostrarInformacion(), reprocudirMusica() ">Ver más</button>
+        </div>
+    </div>
+
+    
+
+    <img src="images/Ezquinerio-removebg-preview.png" alt="Decoración" class="decoracion-superior">
+<img src="images/ezquinero2.png" alt="Decoración" class="decoracion-inferior">
+
+
+    <!-- Sección 2: Información (Oculta al inicio) -->
+    <div id="informacion" class="container principal text-center mt-10 d-none">
+        <h2 class="nombres">Isabel</h2>
+        <h2 class="nombres">&</h2>
+        <h2 class="nombres">Jesús</h2>
+        <p class="fs-2 text-principal">Estamos felices de compartir este día tan especial contigo.</p>
+        <p class="fs-2 text-principal">12 | 12 | 2025</p>
+
+        <!-- Carrusel de imágenes (automático) -->
+        <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade mt-5" data-bs-ride="carousel" data-bs-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/NOVIO1.jpeg" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/NOVIO2.jpeg" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/NOVIO3.jpeg" class="d-block w-100" alt="Imagen 3">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/NOVIO4.jpeg" class="d-block w-100" alt="Imagen 4">
+                </div>
+            </div>
+        </div>
+
+        <!-- Sección 3: Texto alusivo de amor -->
+        <div class="container text-center mt-5">
+            <p class="fs-5">El amor es el sentimiento más profundo que dos personas pueden compartir. Es lo que nos da fuerza, nos hace mejores, y nos impulsa a enfrentar todo juntos. A través de los días, las risas, y los desafíos, el amor ha sido nuestro mayor tesoro, y hoy celebramos este viaje que seguimos recorriendo, de la mano, con ustedes a nuestro lado.</p>
+        </div>
+
+        <img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
+
+        <!-- Sección 4: Padres de los Novios -->
+<section id="padres" class="container padres text-center mt-5">
+    <h2 class="section-title">Nuestros Padres</h2>
+    <p class="fs-5">Estamos profundamente agradecidos con nuestros padres por su amor, apoyo y sacrificio. Ellos han sido nuestra inspiración y guías a lo largo de nuestra vida. Nos sentimos afortunados de tenerlos a nuestro lado en este hermoso día.</p>
+
+    <div class="row mt-4">
+        <!-- Padres de la Novia -->
+        <div class="col-md-6 mb-4">
+            <h4 class="fw-bold">Juan Pérez & María González (Padres de Erika)</h4>
+        </div>
+
+        <!-- Padres del Novio -->
+        <div class="col-md-6 mb-4">
+            <h4 class="fw-bold">Carlos Rodríguez & Laura Martínez (Padres de Alejandro)</h4>
+        </div>
+    </div>
+
+</section>
+
+<img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
+<!-- Sección 5: Padrinos de los Novios -->
+<section id="padrinos" class="container padrino text-center mt-5">
+    <h2 class="section-title">Nuestros Padrinos</h2>
+    <p class="fs-5">Nos sentimos muy afortunados de contar con personas tan especiales que serán nuestros padrinos en este día tan importante. Agradecemos su amor y apoyo, y nos sentimos honrados de que estén a nuestro lado en esta nueva etapa de nuestras vidas.</p>
+
+    <div class="row mt-4">
+        <!-- Padrinos de Velación -->
+        <div class="col-md-4 mb-4">
+            <h4 class="fw-bold">Padrinos de Velación</h4>
+            <p>María y Roberto Hernández</p>
+            <i class="fas fa-lightbulb fa-3x mt-5"></i> <!-- Icono de velación con margen abajo -->
+        </div>
+
+        <!-- Padrinos de Brindis -->
+        <div class="col-md-4 mb-4">
+            <h4 class="fw-bold">Padrinos de Brindis</h4>
+            <p>Isabel y Fernando López</p>
+            <i class="fas fa-glass-cheers fa-3x mt-5"></i> <!-- Icono de brindis con margen abajo -->
+        </div>
+
+        <!-- Padrinos de Anillo -->
+        <div class="col-md-4 mb-4">
+            <h4 class="fw-bold">Padrinos de Anillo</h4>
+            <p>Laura y Pedro García</p>
+            <i class="fas fa-ring fa-3x m-5"></i> <!-- Icono de anillo con margen abajo -->
+        </div>
+    </div>
+</section>
+
+
+
+
+<img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
+<!-- Sección 6: Lugar de la Boda -->
+<section id="lugar" class="container lugar1 text-center mt-5">
+    <h2 class="section-title">Lugar de la Boda</h2>
+    <p class="fs-5">Nuestra boda se celebrará en un lugar muy especial, donde se fusionan la belleza, la naturaleza y el amor. Nos encantaría que estuvieras con nosotros para compartir este momento tan importante.</p>
+
+    <!-- Imagen del lugar -->
+    <div class="mb-4">
+        <img src="images/lugar.png" class="img-fluid rounded" alt="Lugar de la Boda">
+    </div>
+
+    <!-- Dirección del lugar -->
+    <p class="fs-5">La Cascada Mayor De San Pedro Soteapan, Ignacio Zaragoza, Vecinal s/n, 95900 Ver.</p>
+
+    <!-- Botón para redirigir a Google Maps -->
+    <a href="https://maps.app.goo.gl/KAj9WVHMf59Y1tgZ9" class="btn btn-primary btn-lg mt-3" target="_blank">Ver ubicación</a>
+</section>
+
+<img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
+<!-- Sección 7: Cuenta regresiva -->
+<section id="cuenta-regresiva" class="regresiva text-center mt-5">
+    <h2 class="section-title">Cuenta Regresiva</h2>
+    <p class="fs-5">¡Faltan solo unos días para el gran día!</p>
+
+    <!-- Display de la cuenta regresiva -->
+    <div id="cuenta-regresiva-timer" class="display-6"></div>
+</section>
+
+<img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
+
+<!-- Sección de Línea del Tiempo -->
+<section id="linea-del-tiempo" class="container lineatiempo text-center mt-5">
+    <!-- Título de la sección -->
+    <h2 class="section-title">Nuestra Historia</h2>
+
+    <!-- Línea del tiempo -->
+    <div class="timeline">
+        <!-- Evento 1 -->
+        <div class="timeline-event">
+            <div class="timeline-content">
+                <div class="timeline-image">
+                    <img src="images/NOVIO3.jpeg" alt="Imagen 1" class="img-fluid">
+                </div>
+                <h3 class="timeline-year">2022</h3>
+                <h4>Primer Encuentro</h4>
+                <p>El inicio de nuestra historia, donde todo comenzó.</p>
+            </div>
+        </div>
+
+        <!-- Evento 2 -->
+        <div class="timeline-event">
+            <div class="timeline-content">
+                <div class="timeline-image">
+                    <img src="images/NOVIO2.jpeg" alt="Imagen 2" class="img-fluid">
+                </div>
+                <h3 class="timeline-year">2023</h3>
+                <h4>El Gran Paso</h4>
+                <p>El momento en que decidimos compartir nuestras vidas.</p>
+            </div>
+        </div>
+
+        <!-- Evento 3 -->
+        <div class="timeline-event">
+            <div class="timeline-content">
+                <div class="timeline-image">
+                    <img src="images/NOVIO1.jpeg" alt="Imagen 3" class="img-fluid">
+                </div>
+                <h3 class="timeline-year">2024</h3>
+                <h4>La Propuesta</h4>
+                <p>El día en que dijimos "Sí, quiero estar contigo para siempre".</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
+<section id="itinerario" class="container itinerario1 text-center mt-5">
+    <h2 class="section-title">Itinerario</h2>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <ul class="timeline">
+                <li>
+                    <span class="icon"><i class="fas fa-church"></i></span>
+                    <div class="content">
+                        <h4>Ceremonia</h4>
+                        <p>5:00 PM - Iglesia San José</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon"><i class="fas fa-glass-cheers"></i></span>
+                    <div class="content">
+                        <h4>Recepción</h4>
+                        <p>7:00 PM - Salón La Hacienda</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon"><i class="fas fa-utensils"></i></span>
+                    <div class="content">
+                        <h4>Cena</h4>
+                        <p>8:00 PM - Banquete servido</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon"><i class="fas fa-music"></i></span>
+                    <div class="content">
+                        <h4>Baile y Fiesta</h4>
+                        <p>9:30 PM - ¡A celebrar juntos!</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
+<!-- Sección de Lista de Regalos -->
+<section id="regalos" class="container regalos1 text-center mt-5">
+    <h2 class="section-title">Lista de Regalos</h2>
+    <p class="fs-5 mt-3">Aquí encuentras algunos regalos especiales para nosotros, ¡te esperamos con mucho cariño!</p>
+    
+    <!-- Sección Liverpool -->
+    <div class="store mt-5">
+        <h3>Liverpool</h3>
+        <div class="d-flex justify-content-center align-items-center mt-3">
+            <!-- Logo de Liverpool -->
+            <img src="images/liverpool.jpeg" alt="Logo Liverpool" class="img-fluid" style="width: 150px;">
+        </div>
+        
+        <a href="https://www.elpalaciodehierro.com" target="_blank" class="btn btn-custom mt-3">Ver Lista de Regalos</a>
+    </div>
+
+    <!-- Sección Palacio de Hierro -->
+    <div class="store mt-5">
+        <h3>Palacio de Hierro</h3>
+        <div class="d-flex justify-content-center align-items-center mt-3">
+            <!-- Logo de Palacio de Hierro -->
+            <img src="images/palacio.jpeg" alt="Logo Palacio de Hierro" class="img-fluid" style="width: 150px;">
+        </div>
+        <a href="https://www.elpalaciodehierro.com" target="_blank" class="btn btn-custom mt-3">Ver Lista de Regalos</a>
+    </div>
+
+    <!-- Sección Lluvia de Sobres -->
+<div class="store mt-5">
+    <h3>Lluvia de Sobres</h3>
+    <div class="d-flex justify-content-center align-items-center mt-3">
+        <img src="images/sobre.png" alt="Lluvia de Sobres" class="img-fluid" style="width: 150px;">
+    </div>
+    <p class="mt-3">Si deseas colaborar con nuestro inicio de vida juntos, tu amor puede llegar en un sobre. 
+    Un regalo que nos ayudará a comenzar nuestro camino como esposos. 
+    Lo puedes entregar discretamente el día de nuestra boda.</p>
+</div>
+</section>
+
+<img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
+
+
+<!-- Sección Trivia -->
+<section id="trivia" class="container trivia1 text-center mt-5">
+    <h2 class="section-title">Trivia sobre los Novios</h2>
+    <p class="fs-5 mt-3">¡Que tanto nos conoces!</p>
+    
+    <!-- Trivia Form -->
+    <div id="question-container" class="mt-4">
+        <!-- La pregunta y opciones se inyectarán aquí dinámicamente -->
+    </div>
+
+    <button id="next-button" class="btn btn-custom mt-4" onclick="nextQuestion()">Siguiente</button>
+
+    <div id="resultado" class="mt-4" style="display:none;">
+        <h3>¡Gracias por participar!</h3>
+        <p id="score"></p>
+    </div>
+</section>
+
+
+
+<img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
+
+<!-- Sección 11: Información sobre vestimenta y no niños -->
+<section id="informacion-vestimenta" class="container infovesti text-center mt-5">
+    <h3 class="section-title">Información Importante</h3>
+
+    <div class="info-item">
+        <div class="icon">
+            <i class="fas fa-tshirt"></i> <!-- Ícono de camisa para vestimenta -->
+        </div>
+        <h4 class="fw-bold">Vestimenta</h4>
+        <p class="fs-5">El color blanco es un privilegio exclusivo de la novia. Apreciamos que los invitados vengan con ropa formal y elegante para acompañarnos en este día tan especial.</p>
+    </div>
+
+    <div class="info-item">
+        <div class="icon">
+            <i class="fas fa-ban"></i> <!-- Ícono de prohibición para niños -->
+        </div>
+        <h4 class="fw-bold">No se aceptan niños</h4>
+        <p class="fs-5">Queremos que todos los asistentes disfruten de la boda en un ambiente relajado y elegante, por lo que solicitamos amablemente que no se traigan niños. Gracias por su comprensión.</p>
+    </div>
+</section>
+
+<img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
+
+<!-- Sección Confirmación de Asistencia -->
+<section id="confirmacion" class="container confirm text-center mt-5">
+    <h2 class="fw-bold">¡Confirma tu Asistencia!</h2>
+    
+    <p>Haz clic en el siguiente botón para confirmar tu asistencia a la boda a través de WhatsApp:</p>
+    
+    <!-- Contenedor para imagen y botón -->
+    <div class="d-flex flex-column align-items-center">
+        <!-- Imagen de WhatsApp (arriba del botón) -->
+        <img src="images/whatsapp.png" alt="WhatsApp" class="mb-3" style="width: 50px; height: 50px;">
+        
+        <!-- Botón de confirmación de asistencia -->
+        <a href="https://wa.me/+529931660294?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Erika%20y%20Alejandro."
+           target="_blank" class="btn btn-success">
+           Confirmar Asistencia
+        </a>
+    </div>
+</section>
+
+<img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
+<div class="d-flex flex-column align-items-center">
+    <div class="coupon text-center mb-3">
+        <div class="coupon-dashed-border">
+            <h2 class="coupon-title mb-4">¡Boda Erika & Alejandro!</h2>
+            <p class="mb-3">¡Hola <span class="text-decoration-underline">Nombre Invitado</span>!</p>
+            <p>Te invito a mi boda</p>
+            <div class="bg-light p-3 rounded mb-3">
+                <strong>Lugares Disponibles:</strong> 2
+                <br>
+                <strong>Número de Mesa:</strong> 5
+            </div>
+            
+            <!-- Código de Confirmación -->
+            <div class="mb-3">
+                <p>Código de Confirmación:</p>
+                <div class="confirmation-code">
+                    A1B2C3
+                </div>
+            </div>
+
+            <a href="https://wa.me/+529372035199?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Erika%20y%20Alejandro." 
+               target="_blank" class="btn btn-secondary" style="background-color: #8B4513; color: white;"">
+               Confirmar Asistencia
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
+      <!-- ESTE DIV ES EL CHIDO -->   
+    </div>
+
+</section>
+
+
+
+
+
+    </div>
+
+    
+
+</section>
+
+    <!-- Bootstrap JS & Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
