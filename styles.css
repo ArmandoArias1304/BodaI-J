@@ -1,13 +1,16 @@
 /* Estilo para el body */
 body {
     font-family: "Patua One", serif;
-    background: linear-gradient(to bottom, #fcfdff, #fcfdff);
+    background: linear-gradient(to right, #c9c2b3, #fcfdff, #c9c2b3);
     color: #4a2c2a;
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
+.despedida{
+    margin-top: 100px;
+}
 #next-button {
     display: block;
     margin: 20px auto 0; /* Centrar y agregar margen arriba */
@@ -15,13 +18,13 @@ body {
 }
 
 .coupon {
-    border: 3px dashed #d77b3a;
+    border: 3px dashed #8c5736;
     border-radius: 20px;
     padding: 20px;
     max-width: 400px;
     background-color: #eeece2;
     position: relative;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.6);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.8);
 }
 
 .coupon::before,
@@ -30,7 +33,7 @@ body {
     position: absolute;
     width: 20px;
     height: 40px;
-    background-color: white;
+    background-color: rgb(255, 253, 247);
     z-index: 1;
 }
 
@@ -49,30 +52,46 @@ body {
 }
 
 .coupon-dashed-border {
-    border: 2px dashed #aa7712;
+    border: 2px dashed #edb574;
     border-radius: 15px;
     padding: 15px;
 }
 
 .coupon-title {
     font-family: "Patua One", serif;
-    color: #8B4513;
+    color: #74370c;
 }
 
-.confirmation-code {
-    font-size: 1.2em;
-    letter-spacing: 3px;
-    background-color: #ffc369;
-    padding: 10px;
+.letra{
+    color: #674d34;
+}
+
+.letra1{
+    color: #725741;
+    font-size: 16px;
+}
+
+.letraQR{
+    color: #725741;
+}
+
+.qr-placeholder {
+    background-color: #f0f0f0;
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border-radius: 10px;
+    color: #888;
 }
-
 
 .decoracion-superior {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px; /* Ajusta este valor para hacerla más grande */
+    width: 120px; /* Ajusta este valor para hacerla más grande */
     height: auto; /* Puedes cambiarlo a un tamaño fijo si es necesario */
     z-index: 999;
     filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.8));
@@ -82,7 +101,7 @@ body {
     position: fixed;
     bottom: 0;
     right: 0;
-    width: 200px; /* Ajusta este valor para hacerla más grande */
+    width: 120px; /* Ajusta este valor para hacerla más grande */
     height: auto;
     z-index: 999;
     filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.8));
@@ -95,7 +114,7 @@ body {
   }
 
 .principal{
-    margin-top: 190px;
+    margin-top: 110px;
 }
 
 .btn-custom {
@@ -110,8 +129,9 @@ body {
 }
 
 #informacion .nombres {
+    letter-spacing: 1px;
     font-size: 4.5rem;
-    color: #dd9a1f; /* Cambia el color a lo que prefieras */
+    color: #c5963f; /* Cambia el color a lo que prefieras */
     
 }
 
@@ -284,6 +304,14 @@ p {
 
 /* Título de la sección */
 .section-title {
+    font-family: "Sacramento", cursive;
+    font-size: 4rem;
+    color: #e6b33d;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.letratrivia{
     font-family: "Sacramento", cursive;
     font-size: 4rem;
     color: #e6b33d;
@@ -591,6 +619,16 @@ p {
     to{
         opacity: 1; scale: 100%;
     }
+}
+
+.containerfotos{
+    view-timeline-name: --reveal;
+
+    animation-name: show;
+    animation-fill-mode: both;
+
+    animation-timeline: --reveal;
+    animation-range: entry 25% cover 50%;
 }
 
 .fs-5{

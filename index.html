@@ -46,7 +46,7 @@
             <h1 class="nombres">&</h1>
             <h1 class="nombres">Alejandro</h1>
             <p class="parrafo">12 | 12 | 2025</p>
-            <button class="btn btn-light btn-lg mt-3" onclick="mostrarInformacion(), reprocudirMusica() ">Ver más</button>
+            <button class="btn btn-light btn-lg mt-3 sty" onclick="mostrarInformacion(), reprocudirMusica() ">Ver más</button>
         </div>
     </div>
 
@@ -58,9 +58,9 @@
 
     <!-- Sección 2: Información (Oculta al inicio) -->
     <div id="informacion" class="container principal text-center mt-10 d-none">
-        <h2 class="nombres">Isabel</h2>
+        <h2 class="nombres">Erika</h2>
         <h2 class="nombres">&</h2>
-        <h2 class="nombres">Jesús</h2>
+        <h2 class="nombres">Alejandro</h2>
         <p class="fs-2 text-principal">Estamos felices de compartir este día tan especial contigo.</p>
         <p class="fs-2 text-principal">12 | 12 | 2025</p>
 
@@ -98,12 +98,14 @@
     <div class="row mt-4">
         <!-- Padres de la Novia -->
         <div class="col-md-6 mb-4">
-            <h4 class="fw-bold">Juan Pérez & María González (Padres de Erika)</h4>
+            <h4 class="fw-bold">Juan Pérez & María González</h4>
+            <h4 class="fw-bold">(Padres de Erika)</h4>
         </div>
 
         <!-- Padres del Novio -->
         <div class="col-md-6 mb-4">
-            <h4 class="fw-bold">Carlos Rodríguez & Laura Martínez (Padres de Alejandro)</h4>
+            <h4 class="fw-bold">Carlos Rodríguez & Laura Martínez</h4>
+            <h4 class="fw-bold">(Padres de Alejandro)</h4>
         </div>
     </div>
 
@@ -352,58 +354,48 @@
 
 <img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
 
+<section id="compartir-fotos" class="containerfotos text-center mt-5">
+    <h3 class="section-title">Comparte tus Momentos</h3>
+
+    <div class="info-item">
+        <div class="icon">
+            <i class="fas fa-camera"></i> <!-- Ícono de cámara -->
+        </div>
+        <h4 class="fw-bold">Álbum Compartido</h4>
+        <p class="fs-5">¡Ayúdanos a crear recuerdos! Sube tus mejores fotos del evento al álbum compartido.</p>
+        
+        <div class="photo-share-container mt-4">
+            <a href="https://photos.app.goo.gl/sPzXa2TSjvfPZVTr5" target="_blank" class="btn btn-primary btn-lg">
+                <i class="fas fa-cloud-upload-alt me-2"></i>Subir Fotos al Álbum
+            </a>
+        </div>
+        
+        <p class="text-muted mt-3 fs-">
+            Haz clic en el botón para acceder al álbum compartido y agregar tus fotografías.
+        </p>
+    </div>
+</section>
+
+<img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
+
 
 <!-- Sección Confirmación de Asistencia -->
 <section id="confirmacion" class="container confirm text-center mt-5">
-    <h2 class="fw-bold">¡Confirma tu Asistencia!</h2>
+    <h2 class="fw-bold mb-4">¡Confirma tu Asistencia!</h2>
+    <p class="mb-4">Haz clic en el siguiente botón para confirmar tu asistencia a la boda:</p>
     
-    <p>Haz clic en el siguiente botón para confirmar tu asistencia a la boda a través de WhatsApp:</p>
-    
-    <!-- Contenedor para imagen y botón -->
+    <!-- Contenedor para el botón -->
     <div class="d-flex flex-column align-items-center">
-        <!-- Imagen de WhatsApp (arriba del botón) -->
-        <img src="images/whatsapp.png" alt="WhatsApp" class="mb-3" style="width: 50px; height: 50px;">
-        
         <!-- Botón de confirmación de asistencia -->
-        <a href="https://wa.me/+529931660294?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Erika%20y%20Alejandro."
-           target="_blank" class="btn btn-success">
-           Confirmar Asistencia
+        <a id="confirmar-asistencia" href="" target="_blank" class="btn btn-success" style="background-color: #562e0f;">
+            Confirmar Asistencia
         </a>
     </div>
 </section>
 
 <img src="images/separacion.png" alt="Separación" class="img-fluid separacion">
 
-<div class="d-flex flex-column align-items-center">
-    <div class="coupon text-center mb-3">
-        <div class="coupon-dashed-border">
-            <h2 class="coupon-title mb-4">¡Boda Erika & Alejandro!</h2>
-            <p class="mb-3">¡Hola <span class="text-decoration-underline">Nombre Invitado</span>!</p>
-            <p>Te invito a mi boda</p>
-            <div class="bg-light p-3 rounded mb-3">
-                <strong>Lugares Disponibles:</strong> 2
-                <br>
-                <strong>Número de Mesa:</strong> 5
-            </div>
-            
-            <!-- Código de Confirmación -->
-            <div class="mb-3">
-                <p>Código de Confirmación:</p>
-                <div class="confirmation-code">
-                    A1B2C3
-                </div>
-            </div>
-
-            <a href="https://wa.me/+529372035199?text=Hola,%20quiero%20confirmar%20mi%20asistencia%20a%20la%20boda%20de%20Erika%20y%20Alejandro." 
-               target="_blank" class="btn btn-secondary" style="background-color: #8B4513; color: white;"">
-               Confirmar Asistencia
-            </a>
-        </div>
-    </div>
-
-
-
-
+<p>fastnvite.com</p>
 
 
       <!-- ESTE DIV ES EL CHIDO -->   
@@ -425,6 +417,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
     
+    <script>
+        // Obtener el parámetro ID de la URL
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
 
+        if (id) {
+            // Configurar el enlace del botón "Confirmar Asistencia"
+            const confirmarAsistenciaBtn = document.getElementById('confirmar-asistencia');
+            confirmarAsistenciaBtn.href = `formulario_confirmacion.html?id=${id}`;
+        } else {
+            console.error("ID no proporcionado en la URL.");
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

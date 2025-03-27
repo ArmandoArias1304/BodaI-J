@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Invitación</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --secondary-color: #D2691E;
+            --background-color: #FFF8E7;
+            --accent-color: #F5E6D3;
+        }
+
+        body {
+            background: linear-gradient(to right, #fcfdff,);
+            font-family: "Patua One", serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .invitation-container {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .coupon-card {
+    width: 100%;
+    background: #FFF8DC;
+    border-radius: 15px;
+    border: 3px dashed var(--primary-color);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+    overflow: hidden;
+    position: relative;
+}
+
+.coupon-dashed-border {
+    border: 2px dashed #cba165;
+    border-radius: 15px;
+    padding: 15px;
+    margin: 15px; /* Añade espacio entre los dos bordes */
+}
+
+
+        .coupon-header {
+            border-radius: 10px 10px 10px 10px;
+            background-color: #FFF8DC;
+            color: var(--background-color);
+            padding: 5px;
+            text-align: center;
+            position: relative;
+        }
+
+        .coupon-header h2 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.0rem;
+            letter-spacing: 2px;
+        }
+
+        .coupon-body {
+            
+            padding: 25px;
+            text-align: center;
+            background-color: #FFF8DC;
+            position: relative;
+        }
+
+        .guest-details {
+            background-color: #e4c08d;
+            color: rgb(116, 73, 28);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 5px 0;
+            box-shadow: 
+                inset 0 2px 4px rgba(0,0,0,0.1),
+                0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .btn-confirmation, .btn-decline {
+            margin: 10px 0;
+            transition: all 0.2s ease;
+            letter-spacing: 1.5px;
+            padding: 12px;
+        }
+
+        .btn-confirmation {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+        }
+
+        .btn-confirmation:hover {
+            background-color: #A0522D;
+        }
+
+        .btn-decline {
+            background-color: var(--secondary-color);
+            color: var(--background-color);
+        }
+
+        .btn-decline:hover {
+            background-color: #B45F3A;
+        }
+
+        .coupon-footer {
+            background-color: #D2B48C;
+            color: rgb(100, 67, 43);
+            padding: 15px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            font-style: italic;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .place-selection .btn {
+            margin: 5px;
+            background-color: #E7D2BA;
+            color: #4A3933;
+            border: 1px solid var(--primary-color);
+            transition: all 0.2s ease;
+        }
+
+        .form-label {
+            color: rgb(168, 121, 68);
+        }
+
+        .place-selection .btn.active {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+        }
+    
+
+        @media (max-width: 480px) {
+            .coupon-card {
+                margin: 0 10px;
+            }
+            .coupon-header h2 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="invitation-container">
+        <div class="coupon-card">
+            <div class="coupon-dashed-border">
+            <div class="coupon-header">
+                <h2>Confirmación de la Boda</h2>
+            </div>
+            
+            <div class="coupon-body">
+                <div id="invitado" class="guest-details">
+                    <p class="mb-1"><strong>Nombre:</strong> <span id="nombre"></span></p>
+                    <p class="mb-1"><strong>Número de Mesa:</strong> <span id="numero_mesa"></span></p>
+                    <p class="mb-0"><strong>Número de Asiento:</strong> <span id="numero_asiento"></span></p>
+                </div>
+
+                <form id="confirmationForm" action="confirmation.php" method="get">
+                    <input type="hidden" id="id" name="id" required>
+                    <div class="mb-3">
+                        <label class="form-label fw-semibold d-block mb-3">Selecciona el número de lugares a confirmar</label>
+                        <div id="botonesConfirmacion" class="place-selection btn-group justify-content-center mb-4" role="group"></div>
+                        <input type="hidden" id="confirm" name="confirm" required>
+                    </div>
+                    
+                    <div class="d-grid gap-2 mt-4">
+                        <button type="submit" class="btn btn-confirmation rounded-3">
+                            Actualizar Confirmación
+                        </button>
+                        <button type="button" id="noAsistire" class="btn btn-decline">
+                            No podré asistir
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="coupon-footer">
+                Esperamos contar con tu presencia.
+            </div>
+            </div>
+        </div>
+    </div>
+
+       <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Obtener el parámetro ID de la URL
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+    
+            if (id) {
+                // Configurar el enlace del botón "Confirmar Asistencia"
+                const confirmarAsistenciaBtn = document.getElementById('confirmar-asistencia');
+                if (confirmarAsistenciaBtn) {
+                    confirmarAsistenciaBtn.href = `formulario_confirmacion.html?id=${id}`;
+                }
+            } else {
+                console.error("ID no proporcionado en la URL.");
+            }
+    
+            // Código existente para manejar la confirmación
+            const confirmInput = document.getElementById('confirm');
+            const botonesContainer = document.getElementById('botonesConfirmacion');
+            const noAsistireBtn = document.getElementById('noAsistire');
+            const confirmationForm = document.getElementById('confirmationForm');
+    
+            if (id) {
+                document.getElementById('id').value = id;
+                fetch(`get_invitados.php?id=${id}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.error) {
+                            document.getElementById('invitado').innerHTML = `<p class='text-danger'>${data.error}</p>`;
+                        } else {
+                            document.getElementById('nombre').textContent = data.nombre;
+                            document.getElementById('numero_mesa').textContent = data.numero_mesa;
+                            document.getElementById('numero_asiento').textContent = data.numero_asiento;
+    
+                            botonesContainer.innerHTML = '';
+                            for (let i = 1; i <= data.numero_asiento; i++) {
+                                let button = document.createElement('button');
+                                button.type = 'button';
+                                button.classList.add('btn', 'btn-outline-primary', 'm-1');
+                                button.textContent = i;
+                                button.onclick = () => {
+                                    confirmInput.value = i;
+                                    document.querySelectorAll('.btn-outline-primary').forEach(btn => btn.classList.remove('active'));
+                                    button.classList.add('active');
+                                };
+                                botonesContainer.appendChild(button);
+                            }
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        document.getElementById('invitado').innerHTML = `<p class='text-danger'>Error al cargar los datos del invitado.</p>`;
+                    });
+            } else {
+                document.getElementById('invitado').innerHTML = `<p class='text-danger'>ID no proporcionado en la URL.</p>`;
+            }
+    
+            noAsistireBtn.addEventListener('click', function () {
+                Swal.fire({
+                    title: '¿Estás seguro?',
+                    text: 'Confirmas que no podrás asistir a la invitación',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#8B4513',
+                    cancelButtonColor: '#D2691E',
+                    confirmButtonText: 'Sí, no asistiré',
+                    cancelButtonText: 'Cancelar'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch(`confirmation.php?id=${id}&confirm=0`)
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.error) {
+                                    Swal.fire('Error', data.error, 'error');
+                                } else {
+                                    Swal.fire(
+                                        'Confirmado', 
+                                        'Has confirmado que no podrás asistir', 
+                                        'success'
+                                    ).then(() => {
+                                        location.reload();
+                                    });
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                Swal.fire('Error', 'No se pudo procesar la solicitud', 'error');
+                            });
+                    }
+                });
+            });
+    
+            confirmationForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (!confirmInput.value) {
+                    Swal.fire({
+                        title: 'Atención',
+                        text: 'Por favor, selecciona el número de lugares a confirmar',
+                        icon: 'warning',
+                        confirmButtonColor: '#8B4513'
+                    });
+                    return;
+                }
+    
+                fetch(`confirmation.php?id=${id}&confirm=${confirmInput.value}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.error) {
+                            Swal.fire('Error', data.error, 'error');
+                        } else {
+                            Swal.fire(
+                                'Confirmación Actualizada', 
+                                'Has confirmado tu asistencia exitosamente', 
+                                'success'
+                            ).then(() => {
+                                location.reload();
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        Swal.fire('Error', 'No se pudo procesar la solicitud', 'error');
+                    });
+            });
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
